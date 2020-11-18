@@ -10,16 +10,16 @@ function setup() {
 	engine = Engine.create();
 	world = engine.world;
 
-	Bob1 = new Bob(100,220,40);
-	Bob2 = new Bob(179,220,40);
-	Bob3 = new Bob(258,220,40);
-	Bob4 = new Bob(337,220,40);
-	Bob5 = new Bob(916,220,40);
-	Roof1 = new Roof(100,100,80,30)
-	Roof2 = new Roof(179,100,80,30)
-	Roof3 = new Roof(258,100,80,30)
-	Roof4 = new Roof(337,100,80,30)
-	Roof5 = new Roof(416,100,80,30)
+	Bob1 = new Bob(200,220,40);
+	Bob2 = new Bob(279,220,40);
+	Bob3 = new Bob(358,220,40);
+	Bob4 = new Bob(437,220,40);
+	Bob5 = new Bob(1090,220,40);
+	Roof1 = new Roof(200,100,80,30)
+	Roof2 = new Roof(279,100,80,30)
+	Roof3 = new Roof(358,100,80,30)
+	Roof4 = new Roof(437,100,80,30)
+	Roof5 = new Roof(516,100,80,30)
 	Thread1 = new Chain(Bob1.body,Roof1.body)
 	Thread2 = new Chain(Bob2.body,Roof2.body)
 	Thread3 = new Chain(Bob3.body,Roof3.body)
@@ -30,7 +30,7 @@ function setup() {
 }
 
 function draw() {
-  background(255);
+  background(200);
   Bob1.display();
   Bob2.display();
   Bob3.display();
@@ -50,8 +50,3 @@ function draw() {
 
 }
 
-function keyPressed(){
-	if(keyCode === UP_ARROW){
-		Matter.Body.applyForce(paperObject.body,paperObject.body.position,{x:140,y:-400})
-	}
-}
