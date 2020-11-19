@@ -49,4 +49,8 @@ function draw() {
   Thread5.display();
 
 }
-
+function keyPressed(){
+	if(keyCode === UP_ARROW){
+		Matter.Body.applyForce(Bob5.body,Bob5.body.position,{x:200,y:-900})
+	}
+}
